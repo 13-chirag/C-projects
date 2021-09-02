@@ -35,7 +35,7 @@ int main()
             printf("GOOD WORK!!! You have correctly guessed the number.\n");
             count = count + 1;
             printf("YESSS!!! THE NUMBER IS %d.\n", guess_num);
-            printf("********YOU HAVE COMPLETED THIS GAME IN %d ITERATIONS :)", count);
+            printf("\n********YOU HAVE COMPLETED THIS GAME IN %d ITERATIONS :)**********", count);
             break;
         }
     }
