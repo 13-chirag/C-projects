@@ -1,10 +1,15 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 int main()
 {
-    int guess_num = 45; // The number to be guessed by the user
-    int num;            // Initializing "num" variable
-    int count = 0;      // initializing and declaring "count" variable to maintain the count
+    int guess_num; // The number to be guessed by the user
+    srand(time(0));
+    guess_num = rand() % 100 + 1; // we wnt numbers to be between 1 to 100. Thus modulus 100 will give us the remainder and "+1" to not get 0 as a number.
+
+    int num;       // Initializing "num" variable
+    int count = 0; // initializing and declaring "count" variable to maintain the count
 
     printf("\n\n################YOU HAVE TO GUESS THE NUMBER!!!##################\n\n");
     printf("+++++A Random Number is selected by machine you have to guess that number++++++\n\n");
@@ -29,7 +34,7 @@ int main()
         {
             printf("GOOD WORK!!! You have correctly guessed the number.\n");
             count = count + 1;
-            printf("YESSS!!! THE NUMBER IS %d.", guess_num);
+            printf("YESSS!!! THE NUMBER IS %d.\n", guess_num);
             printf("********YOU HAVE COMPLETED THIS GAME IN %d ITERATIONS :)", count);
             break;
         }
